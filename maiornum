@@ -1,0 +1,24 @@
+
+import java.util.Scanner;
+
+public class maiornum {
+    public static void main(String[] args) {
+        Scanner scanner = new Scanner(System.in);
+
+        System.out.print("digite o primeiro número: ");
+        double n1 = scanner.nextDouble();
+
+        System.out.print("digite o segundo número: ");
+        double n2 = scanner.nextDouble();
+
+        if (n1 > n2) {
+            System.out.println("o maior número é: " + n1);
+        } else if (n2 > n1) {
+            System.out.println("o maior número é: " + n2);
+        } else {
+            System.out.println("os dois números são iguais.");
+        }
+
+        scanner.close();
+    }
+}
