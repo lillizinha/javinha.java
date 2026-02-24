@@ -5,10 +5,10 @@ public class bomdia {
     public static void main(String[] args) {
         Scanner scanner = new Scanner(System.in);
 
-        System.out.print("Digite seu nome: ");
+        System.out.print("digite seu nome: ");
         String nome = scanner.nextLine();
 
-        System.out.println("Bom dia, " + nome + "!");
+        System.out.println("bom dia, " + nome + "! :)");
 
         scanner.close();
     }
