@@ -1,49 +1,59 @@
-
 import java.util.Scanner;
 
 public class numeroextenso {
     public static void main(String[] args) {
-        Scanner scanner = new Scanner(System.in);
 
-        System.out.print("Digite um número entre 1 e 100: ");
-        int numero = scanner.nextInt();
+        Scanner sc = new Scanner(System.in);
+        int num;
 
-        String[] unidades = {
-            "", "um", "dois", "três", "quatro", "cinco",
-            "seis", "sete", "oito", "nove"
-        };
+        System.out.print("Digite um número de 1 a 10: ");
+        num = sc.nextInt();
 
-        String[] especiais = {
-            "dez", "onze", "doze", "treze", "quatorze",
-            "quinze", "dezesseis", "dezessete",
-            "dezoito", "dezenove"
-        };
+        switch (num) {
+            case 1:
+                System.out.println("Um");
+                break;
 
-        String[] dezenas = {
-            "", "", "vinte", "trinta", "quarenta",
-            "cinquenta", "sessenta", "setenta",
-            "oitenta", "noventa"
-        };
+            case 2:
+                System.out.println("Dois");
+                break;
 
-        if (numero < 1 || numero > 100) {
-            System.out.println("Número fora do intervalo.");
-        } else if (numero == 100) {
-            System.out.println("cem");
-        } else if (numero < 10) {
-            System.out.println(unidades[numero]);
-        } else if (numero < 20) {
-            System.out.println(especiais[numero - 10]);
-        } else {
-            int dez = numero / 10;
-            int un = numero % 10;
+            case 3:
+                System.out.println("Três");
+                break;
 
-            if (un == 0) {
-                System.out.println(dezenas[dez]);
-            } else {
-                System.out.println(dezenas[dez] + " e " + unidades[un]);
-            }
+            case 4:
+                System.out.println("Quatro");
+                break;
+
+            case 5:
+                System.out.println("Cinco");
+                break;
+
+            case 6:
+                System.out.println("Seis");
+                break;
+
+            case 7:
+                System.out.println("Sete");
+                break;
+
+            case 8:
+                System.out.println("Oito");
+                break;
+
+            case 9:
+                System.out.println("Nove");
+                break;
+
+            case 10:
+                System.out.println("Dez");
+                break;
+
+            default:
+                System.out.println("Número fora do intervalo.");
         }
 
-        scanner.close();
+        sc.close();
     }
 }
