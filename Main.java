@@ -1,31 +1,76 @@
-import java.util.Scanner;
+
+
+import javax.swing.JOptionPane;
+
 public class Main {
+
     public static void main(String[] args) {
-       Scanner scanner = new Scanner(System.in);
 
-       System.out.println("-----registro aluno-----");
+        // FORMULÁRIO DO ALUNO
+        String nomeAluno =
+                JOptionPane.showInputDialog("Nome do aluno:");
 
-       System.out.println("digite o nome do aluno: ");
-       String nomedig = scanner.nextLine();
+        String telefoneAluno =
+                JOptionPane.showInputDialog("Telefone do aluno:");
 
-       System.out.println("digite a matricula do aluno: ");
-       int mtrDig = scanner.nextInt();
+        String cpfAluno =
+                JOptionPane.showInputDialog("CPF do aluno:");
 
-       System.out.println("digite a data de nascimento do aluno: ");
-       String dtDig = scanner.nextLine();
+        String matriculaAluno =
+                JOptionPane.showInputDialog("Matrícula do aluno:");
 
-       System.out.println("digite o telefone do aluno: ");
-       String teleDig = scanner.nextLine();
+        // OBJETO ALUNO
+        Aluno a1 = new Aluno(
+                nomeAluno,
+                telefoneAluno,
+                cpfAluno,
+                matriculaAluno
+        );
 
-       System.out.println("digite o nome do responsavel do aluno: ");
-       String nomeReponsadig = scanner.nextLine();
-      
-       Aluno aluno1 = new Aluno(nomedig, mtrDig, dtDig, teleDig, nomeReponsadig);
+        // OBJETOS FIXOS
+        Professor p1 = new Professor(
+                "Pedro",
+                "98888",
+                "456",
+                "002",
+                "Mestre"
+        );
 
-       System.out.println("/n" + aluno1.Saudacao());
-       System.out.println("/n" + aluno1.apresenteSe());
+        Funcionario f1 = new Funcionario(
+                "Lucas",
+                "97777",
+                "789",
+                "C01",
+                "Coordenador"
+        );
 
-       scanner.close();
+        Aluno[] alunos = {a1};
 
+        Responsavel r1 = new Responsavel(
+                "Carlos",
+                "96666",
+                "999",
+                alunos
+        );
+
+        Pessoa[] pessoas = {a1, p1, f1, r1};
+
+        String resultado = "";
+
+        
+        for (Pessoa p : pessoas) {
+
+            resultado += p.saudacao() + "\n\n";
+        }
+
+        resultado += r1.mostrarAlunos();
+
+        // JANELA FINAL
+        JOptionPane.showMessageDialog(
+                null,
+                resultado,
+                "Sistema Escolar",
+                JOptionPane.INFORMATION_MESSAGE
+        );
     }
 }
