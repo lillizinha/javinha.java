@@ -1,6 +1,6 @@
 import.java.util.Scanner;
 
-public class Funcionario extends Pessoa {
+public class Funcionarios extends Pessoa {
 
     private String cod;
     private String funcao;
