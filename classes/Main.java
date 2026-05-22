@@ -6,7 +6,7 @@ public class Main {
 
     public static void main(String[] args) {
 
-        // FORMULÁRIO DO ALUNO
+        
         String nomeAluno =
                 JOptionPane.showInputDialog("Nome do aluno:");
 
@@ -19,7 +19,7 @@ public class Main {
         String matriculaAluno =
                 JOptionPane.showInputDialog("Matrícula do aluno:");
 
-        // OBJETO ALUNO
+        
         Aluno a1 = new Aluno(
                 nomeAluno,
                 telefoneAluno,
@@ -27,7 +27,7 @@ public class Main {
                 matriculaAluno
         );
 
-        // OBJETOS FIXOS
+        
         Professor p1 = new Professor(
                 "Pedro",
                 "98888",
@@ -65,7 +65,7 @@ public class Main {
 
         resultado += r1.mostrarAlunos();
 
-        // JANELA FINAL
+        
         JOptionPane.showMessageDialog(
                 null,
                 resultado,
